@@ -1,0 +1,14 @@
+<view class="cu-timeline">
+  <view class="cu-item text-yellow">
+    <view class="bg-yellow content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-black">v0.1</view>
+        <view class="cu-tag line-black">2020/05/30</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>体验版</view>
+      </view>
+    </view>
+  </view>
+
+</view>

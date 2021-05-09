@@ -1,0 +1,17 @@
+<!--pages/myclub/myclub.wxml-->
+<view class="cu-card dynamic" wx:for="{{myCommunity}}" wx:key="id">
+	<view class="cu-item shadow">
+		<view class="cu-list menu-avatar">
+			<view class="cu-item">
+				<view class="cu-avatar round lg" style="background-image:url(../../images/{{item.thumbnail}});"></view>
+				<view class="content flex-sub">
+					<view class="text-bold" bindtap="goToClub" data-id="{{item.id}}" style="font-size:36rpx;padding-bottom:5rpx">
+						{{item.name}}
+					</view>
+					<view wx:if="{{item.isDirector}}" class="bg-yellow" bindtap="goToApplyList" data-id="{{item.id}}">查看申请列表</view>
+					<view class="text-gray text-sm padding-left-sm">{{item.introduction}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

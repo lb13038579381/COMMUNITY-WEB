@@ -1,0 +1,16 @@
+<!--pages/activity/article_apply.wxml-->
+<view class="margin-xl">
+  <view class="info">填写反馈信息</view>
+  <view class="padding-top text-grey padding-bottom-xl">请准确填写反馈信息</view>
+  <form bindsubmit="submitFeedback">
+    <view class="solids-bottom"></view>
+    <view class="solids-bottom"></view>
+    <view class="cu-form-group">
+      <view class="text-xl title"></view>
+      <textarea id="text" name="text" maxlength="-1"></textarea>
+    </view>
+      <view class="text-center">
+        <button form-type="submit" class="cu-btn bg-yellow apply_btn">提交</button>
+      </view>
+  </form>
+</view>

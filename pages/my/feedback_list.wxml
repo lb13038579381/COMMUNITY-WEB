@@ -1,0 +1,13 @@
+<!--pages/myfollow/myfollow.wxml-->
+<view class="cu-list menu-avatar">
+	<view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{applyList}}" wx:key="id" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}"
+	style="height:160rpx;"
+	>
+		<view class="content" style="left:27rpx;">
+      <view class="text-grey text-bold" style="font-size:24rpx;line-height:20rpx;">反馈内容：{{item.text}}</view>
+		</view>
+		<view class="move">
+      <view class="bg-red" bindtap="deleteFeedback" data-id="{{item.id}}">删除</view>
+		</view>
+	</view>
+</view>

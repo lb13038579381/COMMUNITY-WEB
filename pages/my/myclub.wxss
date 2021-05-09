@@ -1,0 +1,10 @@
+/* pages/myclub/myclub.wxss */
+.bg-yellow {
+    width: 170rpx;
+    float: right;
+}
+
+.cu-card>.cu-item {
+    margin-bottom: 0rpx;
+}
+

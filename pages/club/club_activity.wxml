@@ -1,0 +1,76 @@
+ <scroll-view scroll-y>
+ <view class="padding-top-sm"></view>
+	<view class="cu-card article">
+		<view style="margin-top: 15rpx" class="cu-item shadow">
+			<view style="line-height:80rpx" class="title">
+				<view class="text-cut text-xl ">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
+			</view>
+			<view class="content">
+				<image src="../../image/11.jpg" mode="aspectFill"></image>
+				<view class="desc">
+					<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+					<view class="text-bold">
+						<view class="cu-tag bg-yellow light round">正义天使</view>
+						<view class="cu-tag bg-yellow light round">史诗</view>
+					</view>
+					<view class="flex justify-between text-grey padding-xs">
+							2020年5月22日
+							<view>红十字会</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="cu-card case">
+		<view style="margin-top: 15rpx" class="cu-item shadow">
+			<view class="image">
+				<image class="image_activity" src="../../image/11.jpg" mode="aspectFill"></image>
+				<view class="cu-tag bg-green">未开始</view>
+				<view class="cu-bar bg-shadeBottom">
+					<text class="text-cut">我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。</text>
+				</view>
+			</view>
+			<view class="cu-list padding-sm">
+				<view class="cu-item">
+					<view class="text-xl text-bold flex justify-between">
+						微信小程序大赛
+						<view>
+							<view class="cu-tag round bg-yellow light">1234</view>
+							<view class="cu-tag round bg-yellow light">123</view>
+							<view class="cu-tag round bg-yellow light">123</view>
+						</view>
+
+					</view>
+					<view class="text-grey padding-top-xs">时间：2018年11月18日 19:00-20:00</view>
+					<view class="text-grey flex justify-between">
+					地点：活动中心
+					<view>红十字会</view>					
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+<view class="cu-card article">
+		<view style="margin-top: 15rpx" class="cu-item shadow">
+			<view style="line-height:80rpx" class="title">
+				<view class="text-cut text-xl ">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
+			</view>
+			<view class="content">
+				<image src="../../image/11.jpg" mode="aspectFill"></image>
+				<view class="desc">
+					<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+					<view class="text-bold">
+						<view class="cu-tag bg-yellow light round">正义天使</view>
+						<view class="cu-tag bg-yellow light round">史诗</view>
+					</view>
+					<view class="flex justify-between text-grey padding-xs">
+							2020年5月22日
+							<view>红十字会</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+ </scroll-view>

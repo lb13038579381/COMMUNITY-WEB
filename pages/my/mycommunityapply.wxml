@@ -1,0 +1,18 @@
+<!--pages/mycollect/mycollect.wxml-->
+
+<view class="cu-card" wx:for="{{myCommunityApply}}" wx:key="id">
+  <view class="cu-item shadow">
+    <view class="content">
+      <view class="flex margin-lg">
+        <view class="flex-twice">
+          <view class="title text-cut" bindtap="goToClub" data-id="{{item.communityId}}">{{item.communityName}}</view>
+          <view wx:if="{{item.status == 0}}" class="apply_status">申请状态：待处理</view>
+          <view wx:if="{{item.status == 1}}" class="apply_status">申请状态：通过</view>
+          <view wx:if="{{item.status == 2}}" class="apply_status">申请状态：拒绝</view>
+          <view class="apply_time">申请时间：{{item.applyTimeStr}}</view>
+          <view class="apply_time">申请备注：{{item.apply}}</view>
+        </view>
+      </view>
+    </view>
+   </view>
+  </view>

@@ -1,0 +1,43 @@
+<view class="cu-card dynamic">
+	<view bindtap="goToDetail" class="cu-item shadow">
+		<view class="cu-list menu-avatar">
+			<view class="cu-item">
+				<view class="cu-avatar round lg" style="background-image:url({{msg.msg.club.avatar}});"></view>
+				<view class="content flex-sub">
+					<view class="text-bold flex justify-between" style="font-size:36rpx">
+						{{msg.msg.club.club_name}}
+						<view class="text-gray text-sm">{{msg.msg.create_time}}</view>
+					</view>
+					<view class="text-gray">
+						{{msg.msg.clubson.clubson_name}}
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="padding-left-lg">
+			<view class="text-df padding-top-xs">
+				时间：
+				<image class="title_icon" src="../../image/time.png"></image>
+				{{msg.msg.start_time}}
+			</view>
+			<view class="text-df padding-top-xs">地点：
+				<image class="title_icon" src="../../image/location.png"></image>
+				{{msg.msg.place}}
+			</view>
+		</view>
+		<view class="msg_title">
+			{{msg.msg.msg_title}}
+		
+		</view>
+		<view class="text-content">
+			<text>
+			{{msg.msg.content}}
+			</text>
+		</view>
+		<view class="solids-bottom margin-lr margin-bottom-sm"></view>
+		<view class="padding-lr padding-tb text-grey">发布人：{{msg.msg.add_user.user_name}}</view>
+	</view>
+</view>
+
+<button class="margin-lr text-bold cu-btn block bg-yellow margin-tb-sm lg" wx:if="{{is_read}}" bindtap="IsRead" data-id="{{msg.id}}" data-type="{{msg.msg.type}}">收到</button>
+<button class="margin-lr text-bold cu-btn block bg-yellow margin-tb-sm lg" wx:else disabled type="">已收到</button>

@@ -1,0 +1,37 @@
+<!--pages/search.wxml-->
+<form bindsubmit="toSearch">
+	<view class="cu-bar search bg-white">
+
+		<view class="search-form round">
+			<text class="cuIcon-search"></text>
+			<input id="search_words" name="search_words" type="text" value="{{words}}" placeholder="搜索社团、组织" confirm-type="search"></input>
+		</view>
+		<view class="action">
+			<button form-type="submit" class="cu-btn bg-yellow shadow-blur round">搜索</button>
+		</view>
+
+	</view>
+</form>
+		<view class="padding-lr" wx:for="{{communityList}}" wx:key='id' id="main-{{index}}">
+			<view class="cu-card case">
+				<view class="cu-item shadow">
+					<view class="cu-item" bindtap="goToClub" data-id="{{item.id}}">
+						<view class="image">
+							<image src="{{item.image}}" mode="aspectFill"></image>
+						</view>
+						<view class="padding-left-sm content flex-sub">
+							<view class="padding-top-xs text-xl text-bold">{{item.club_name}}</view>
+							<view class="padding-top-xs">
+								<view class=" cu-tag bg-yellow light round" wx:for="{{item.keywords}}" wx:key='id' wx:for-item="word">{{word}}</view>
+							</view>
+							<view class="padding-xs padding-bottom">
+								{{item.introduction}}
+							</view>
+						</view>
+					</view>
+				</view>
+
+			</view>
+
+
+		</view>

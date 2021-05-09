@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<!-- <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" indicator-active-color="#fbbd08">
+	<swiper-item bindtap="goToInfo" wx:for="{{bannerList}}" wx:key="id" data-id="{{item.id}}" data-type="{{item.type}}">
+		<image src="../../images/{{item.thumbnail}}" mode="aspectFill"></image>
+	</swiper-item>
+</swiper> -->
+<view>
+	<view>
+		<navigator >
+			<image class="logo" src="../../image/logo.png" mode="aspectFill"></image>
+		</navigator>
+	</view>
+	<scroll-view scroll-with-animation scroll-x class="nowrap padding-lr padding-bottom">
+		<view wx:for="{{hotList}}" wx:key="id" bindtap="goToInfo" data-id="{{item.id}}" data-type="1" class="image image_signup">
+			<image style="height:100%" src="../../images/{{item.thumbnail}}" mode="aspectFill"></image>
+			<view class="cu-bar bg-shadeBottom">
+				<text class="text-cut">{{item.title}}</text>
+			</view>
+		</view>
+	</scroll-view>
+</view>
+<view class="box">
+	<view class="cu-bar bg-white">
+		<view class="action">
+			<text class="cuIcon-titles text-yellow"></text>
+			<text class="text-xl text-bold">最新动态</text>
+		</view>
+		<view bindtap="Info" class="padding-right text-grey">更多动态</view>
+	</view>
+</view>
+<view class="cu-timeline">
+	<view class="cu-item" wx:for="{{infoList}}" wx:key="id">
+		<view>
+			<image class="avatar" bindtap="goToClub" data-id="{{item.communityId}}" src="{{item.info.club.avatar}}" mode="aspectFill"></image>
+			  <view class="margin-left cu-tag radius lg bg-yellow">{{item.name}}</view>
+		</view>
+		<view class="cu-card case">
+			<view class="cu-item shadow">
+				<view class="image" bindtap="goToInfo" data-id="{{item.id}}" data-type="{{item.type}}">
+					<image class="image_activity" src="../../images/{{item.thumbnail}}" mode="aspectFill"></image>
+					<view class="cu-bar bg-shadeBottom">
+						<text class="text-cut">{{item.title}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

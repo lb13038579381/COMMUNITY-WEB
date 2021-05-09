@@ -1,0 +1,26 @@
+<!--pages/mycollect/mycollect.wxml-->
+
+<view class="cu-card" wx:for="{{myApply}}" wx:key="id">
+	<view class="cu-item shadow">
+		<view class="content">
+			<view class="flex margin-lg">
+				<view class="flex-twice">
+					<view class="title text-cut" bindtap="goToInfo" data-id="{{item.informationId}}">{{item.title}}</view>
+					<view>
+						<!-- <view class="activity_status">
+							活动状态：
+							<view class="cu-tag bg-green radius sm">未开始</view>
+						</view> -->
+						<view class="apply_status">报名状态：<view class="cu-tag bg-green radius sm">成功</view>
+						</view>
+						<view class="apply_time">结束时间：{{item.endTimeStr}}</view>
+						<view class="apply_time">报名时间：{{item.applyTimeStr}}</view>
+					</view>
+				</view>
+				<view class="flex-sub activity_image">
+					<image src="{{item.activity.thumbnail}}" mode="aspectFill"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

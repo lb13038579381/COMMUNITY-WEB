@@ -1,0 +1,81 @@
+/**index.wxss**/
+
+Page {
+    background-color: #fff;
+}
+
+.screen-swiper {
+    min-height: 380rpx;
+}
+
+.scroll-header {
+    display: flex;
+    white-space: nowrap;
+}
+
+.scroll-header view {
+
+    display: inline-block;
+}
+
+.image_signup {
+    width: 250rpx;
+    display: inline-block;
+    margin-right: 15px;
+    height: 200rpx;
+    border-radius: 20rpx;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.avatar {
+    display: block;
+    position: absolute;
+    top: 36rpx;
+    z-index: 9;
+    background-color: var(--white);
+    line-height: 50rpx;
+    left: 20rpx;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.image_activity {
+    height: 300rpx;
+}
+
+.image .cu-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 0rpx 30rpx;
+}
+
+
+.cu-card>.cu-item {
+    display: block;
+    background-color: var(--white);
+    overflow: hidden;
+    border-radius: 20rpx;
+    margin: 10rpx 30rpx 15rpx 30rpx;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.logo{
+    height: 400rpx;
+    width: 3000rpx;
+  }
+/* 
+  .header{
+    border-radius:50%;
+    overflow:hidden;
+    height: 150rpx;
+    width: 150rpx;
+  } */
+  

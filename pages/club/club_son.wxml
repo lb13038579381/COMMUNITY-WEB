@@ -1,0 +1,70 @@
+			<scroll-view scroll-y>
+				<view class="flex">
+					<!-- 左边 -->
+					<view class="flex-sub">
+						<view class="cu-card">
+							<view class="club_son  padding-sm shadow margin-l">
+								<view class="flex justify-start">
+									<view class=" cu-avatar lg round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);"></view>
+									<view class="padding-top-xs padding-left-sm">
+										<view class="text-bold text-lg">生活部</view>
+										<view class="text-grey padding-top-xs">部长:张三</view>
+									</view>
+								</view>
+								<view class="content padding-top-sm">
+									<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水
+								</text>
+								</view>
+							</view>
+						</view>
+						<view class="cu-card">
+							<view class="club_son  padding-sm shadow margin-l">
+								<view class="padding-top-xs flex justify-start">
+									<view class="padding-top-xs cu-avatar lg round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);"></view>
+									<view class="padding-left-sm">
+										<view class="text-bold text-lg">生活部</view>
+										<view class="text-grey padding-top-xs">部长:张三</view>
+									</view>
+								</view>
+								<view class="content padding-top-sm">
+									<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;社团与爱口水社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水
+								</text>
+								</view>
+							</view>
+						</view>
+					</view>
+					<!-- 右边 -->
+					<view class="flex-sub">
+						<view class="cu-card">
+							<view class="club_son  padding-sm shadow margin-l">
+								<view class="flex justify-start">
+									<view class=" cu-avatar lg round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);"></view>
+									<view class="padding-top-xs padding-left-sm">
+										<view class="text-bold text-lg">生活部</view>
+										<view class="text-grey padding-top-xs">部长:张三</view>
+									</view>
+								</view>
+								<view class="content padding-top-sm">
+									<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水
+								</text>
+								</view>
+							</view>
+						</view>
+						<view class="cu-card">
+							<view class="club_son  padding-sm shadow margin-l">
+								<view class="flex justify-start">
+									<view class=" cu-avatar lg round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);"></view>
+									<view class="padding-top-xs padding-left-sm">
+										<view class="text-bold text-lg">生活部</view>
+										<view class="text-grey padding-top-xs">部长:张三</view>
+									</view>
+								</view>
+								<view class="content padding-top-sm">
+									<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水社团与爱睡觉的利夫卡就收到了饭卡上的浪费口水
+								</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</scroll-view>

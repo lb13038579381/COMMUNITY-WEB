@@ -1,0 +1,24 @@
+<!--pages/activity/article_apply.wxml-->
+<view class="margin-xl">
+	<view class="info">填写报名信息</view>
+	<view class="padding-top text-grey padding-bottom-xl">请准确填写报名信息</view>
+	<form bindsubmit="submitApply">
+		<view class="solids-bottom"></view>
+		<view class="cu-form-group">
+			<view class="text-xl title">联系电话</view>
+			<input id="phone" name="phone" placeholder="请填写联系电话"></input>
+		</view>
+		<view class="solids-bottom"></view>
+		<view class="cu-form-group align-start">
+			<view class="title">其他</view>
+			<textarea id="remarks" name="remarks" maxlength="-1" placeholder="说明补充/备注"></textarea>
+		</view>
+		<view class="text-center">
+			<button form-type="submit" class="cu-btn bg-yellow apply_btn">提交</button>
+		</view>
+	</form>
+</view>
+<view class='cu-load load-modal'  wx:if="{{loadModal}}">
+  <view class='cuIcon-emojifill text-yellow'></view>
+  <view class='gray-text'>拼命报名中...</view>
+</view>

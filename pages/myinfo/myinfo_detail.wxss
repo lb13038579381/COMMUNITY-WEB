@@ -1,0 +1,24 @@
+.cu-card.dynamic>.cu-item>.text-content {
+    padding: 0 30rpx 0;
+    max-height: 6.4em;
+    overflow: hidden;
+    font-size: 34rpx;
+    margin-bottom: 20rpx;
+}
+
+.cu-btn.lg {
+    padding: 0 40rpx;
+    font-size: 36rpx;
+    height: 80rpx;
+}
+.title_icon{
+    width: 30rpx;
+    height: 30rpx;
+  }
+
+  .msg_title{
+      text-align: center;
+      padding-top: 30rpx;
+      font-size: 32rpx;
+      font-weight: bold;
+  }

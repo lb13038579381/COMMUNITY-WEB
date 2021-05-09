@@ -1,0 +1,13 @@
+/**app.wxss**/
+@import "common/main.wxss";
+@import "common/icon.wxss";
+
+.container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+} 

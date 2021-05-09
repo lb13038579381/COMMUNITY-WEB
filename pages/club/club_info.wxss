@@ -1,0 +1,12 @@
+.info_title {
+  border-left: 5px solid yellow;
+  font-size: 20px;
+  font-weight: 550;
+  padding-left: 5px;
+  margin: 10px 15px;
+}
+
+.info_content {
+  /* background-color: red; */
+  margin: 0px 15px;
+}

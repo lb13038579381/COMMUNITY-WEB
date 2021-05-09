@@ -1,0 +1,20 @@
+<!--pages/activity/article_apply.wxml-->
+<view class="margin-xl">
+	<view class="info">填写申请信息</view>
+	<view class="padding-top text-grey padding-bottom-xl">请准确填写申请信息</view>
+	<form bindsubmit="submitApply">
+		<view class="solids-bottom"></view>
+		<view class="cu-form-group">
+			<view class="text-xl title">联系方式</view>
+			<input id="phone" name="phone" placeholder="请填写联系电话"></input>
+		</view>
+		<view class="solids-bottom"></view>
+		<view class="cu-form-group align-start">
+      <view class="title">详情</view>
+			<textarea id="remark" name="remark" maxlength="-1" placeholder="申请原因"></textarea>
+		</view>
+		<view class="text-center">
+			<button form-type="submit" class="cu-btn bg-yellow apply_btn">提交</button>
+		</view>
+	</form>
+</view>

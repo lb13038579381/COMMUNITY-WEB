@@ -1,0 +1,10 @@
+/* pages/activity/activity.wxss */
+
+.cu-tag{
+  left: 0;
+  border-bottom-right-radius: 13rpx;
+}
+
+.image_activity{
+  height: 280rpx;
+}

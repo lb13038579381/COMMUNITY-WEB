@@ -1,0 +1,176 @@
+<!--pages/activity/activity.wxml-->
+<scroll-view scroll-x class="nav {{scrollTop > 30 ? 'topnav' : ''}}" scroll-with-animation>
+	<view class=" text-bold text-xl cu-item {{0==TabCur?'text-yellow cur':''}}" wx:key bindtap="tabSelect" data-id="0">
+		动态
+	</view>
+	<view class="text-bold text-xl cu-item {{1==TabCur?'text-yellow cur':''}}" wx:key bindtap="tabSelect" data-id="1">
+		关注
+	</view>
+	<view class="text-bold text-xl cu-item {{2==TabCur?'text-yellow cur':''}}" wx:key bindtap="tabSelect" data-id="2">
+		收藏
+	</view>
+</scroll-view>
+
+<!-- 动态页 -->
+<view wx:key wx:if="{{0==TabCur}}">
+	<!-- 火热报名中 -->
+	<view class="cu-card case">
+		<view style="margin-top:0rpx" class="cu-item shadow">
+			<view class="cu-bar bg-white">
+				<view class="action">
+					<text class="cuIcon-titles text-yellow"></text>
+					<text class="text-xl text-bold">火热报名中</text>
+				</view>
+			</view>
+			<scroll-view scroll-with-animation scroll-x class="nowrap padding-lr padding-bottom">
+				<view wx:if="{{!empty_hotActList}}" bindtap="goToInfo" data-id="{{item.id}}" wx:for="{{hotActList}}"
+					data-type="1" class="image image_signup" wx:key="id">
+					<image style="height:100%" src="../../images/{{item.thumbnail}}" mode="aspectFill"></image>
+					<view class="cu-tag bg-yellow" wx:if="{{item.people == 0}}">无限制</view>
+					<view class="cu-tag bg-yellow" wx:else>{{item.count}}/{{item.people}}人</view>
+					<view class="cu-bar bg-shadeBottom">
+						<text class="text-cut">{{item.title}}</text>
+					</view>
+
+				</view>
+
+				<view class="padding text-center text-grey" wx:if="{{empty_hotActList}}">
+					暂无活动报名！
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+
+
+	<!-- 动态 -->
+	<view wx:for="{{infoList}}" wx:key="id">
+		<view wx:if="{{item.type == 1}}" class="cu-card case">
+			<view style="margin-top: 15rpx" class="cu-item shadow" bindtap="goToInfo" data-id="{{item.id}}"
+				data-type="{{item.type}}">
+				<view class="image">
+					<image class="image_activity" src="../../images/{{item.thumbnail}}" mode="aspectFill"></image>
+					<view wx:if="{{item.status == 0}}" class="cu-tag bg-green">预热</view>
+					<view wx:elif="{{item.status == 1}}" class="cu-tag bg-yellow">报名中</view>
+					<view wx:elif="{{item.status == 2}}" class="cu-tag bg-red">已结束</view>
+					<view class="cu-bar bg-shadeBottom">
+						<text class="text-cut">{{item.title}}</text>
+					</view>
+				</view>
+				<view class="cu-list padding-sm">
+					<view class="cu-item">
+						<view class="text-xl text-bold flex justify-between">
+							<text style="width: 60%;" class="text-cut">{{item.title}}</text>
+						</view>
+						<view class="text-grey padding-top-xs">时间：{{item.timeStr}}</view>
+						<view class="text-grey flex justify-between">
+							地点：{{item.address}}
+							<view>{{item.communityName}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+		<view wx:if="{{item.type == 0}}" class="cu-card article">
+			<view style="margin-top: 15rpx" class="cu-item shadow" bindtap="goToInfo" data-id="{{item.info.id}}"
+				data-type="{{item.type}}">
+				<view style="line-height:80rpx" class="title">
+					<view class="text-cut text-xl ">{{item.title}}</view>
+				</view>
+				<view class="content">
+					<image src="../../images/{{item.thumbnail}}" mode="aspectFill"></image>
+					<view class="desc">
+						<view class="text-content">{{item.text}}</view>
+						<view class="flex justify-between text-grey padding-xs">
+							{{item.info.check_time}}
+							<view>{{item.communityName}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+
+	</view>
+
+	<view class="cu-load text-grey loading "></view>
+	<view class="text-center text-grey padding-top-xl padding-bottom-sm" wx:if="{{info_loadAll}}">------社团也是有底线的噢！------
+	</view>
+</view>
+
+
+
+<!-- 关注页 -->
+<view wx:key wx:if="{{1==TabCur}}">
+	<view wx:if="{{!empty_followList}}" wx:for="{{followList}}" wx:key="id">
+		<view wx:if="{{item.type == 1}}" class="cu-card case">
+			<view style="margin-top: 15rpx" class="cu-item shadow" bindtap="goToInfo" data-id="{{item.id}}"
+				data-type="{{item.type}}">
+				<view class="image">
+					<image class="image_activity" src="../../images/{{item.thumbnail}}" mode="aspectFill"></image>
+					<view wx:if="{{item.status == 0}}" class="cu-tag bg-green">预热</view>
+					<view wx:elif="{{item.status == 1}}" class="cu-tag bg-yellow">报名中</view>
+					<view wx:elif="{{item.status == 2}}" class="cu-tag bg-red">已结束</view>
+					<view class="cu-bar bg-shadeBottom">
+						<text class="text-cut">{{item.title}}</text>
+					</view>
+				</view>
+				<view class="cu-list padding-sm">
+					<view class="cu-item">
+						<view class="text-xl text-bold flex justify-between">
+							<text style="width: 60%;" class="text-cut">{{item.title}}</text>
+						</view>
+						<view class="text-grey padding-top-xs">时间：{{item.timeStr}}</view>
+						<view class="text-grey flex justify-between">
+							地点：{{item.address}}
+							<view>{{item.communityName}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+	<view class="cu-load text-grey loading " wx:if="{{!follow_loadAll && !empty_followList}}"></view>
+	<view class="text-center text-grey padding-top-xl padding-bottom-sm" wx:if="{{follow_loadAll}}">------社团也是有底线的噢！------
+	</view>
+
+	<view class="page_center" wx:if="{{empty_followList}}">
+		<view style="width:50%" bindtap="goToMy" class="cu-btn bg-yellow shadow-blur round">去登录吧！</view>
+	</view>
+</view>
+
+<!-- 活动页 -->
+<view wx:key wx:if="{{2==TabCur}}">
+	<view wx:for="{{collectList}}" wx:key="id" class="cu-card case">
+		<view style="margin-top: 15rpx" class="cu-item shadow" bindtap="goToInfo" data-id="{{item.id}}"
+			data-type="{{item.type}}">
+			<view class="image">
+				<image class="image_activity" src="../../images/{{item.thumbnail}}" mode="aspectFill"></image>
+				<view wx:if="{{item.status == 0}}" class="cu-tag bg-green">预热</view>
+				<view wx:elif="{{item.status == 1}}" class="cu-tag bg-yellow">报名中</view>
+				<view wx:elif="{{item.status == 2}}" class="cu-tag bg-red">已结束</view>
+				<view class="cu-bar bg-shadeBottom">
+					<text class="text-cut">{{item.title}}</text>
+				</view>
+			</view>
+			<view class="cu-list padding-sm">
+				<view class="cu-item">
+					<view class="text-xl text-bold flex justify-between">
+						<text style="width: 60%;" class="text-cut">{{item.title}}</text>
+					</view>
+					<view class="text-grey padding-top-xs">时间：{{item.timeStr}}</view>
+					<view class="text-grey flex justify-between">
+						地点：{{item.address}}
+						<view>{{item.communityName}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="cu-load text-grey padding-top loading " wx:if="{{!activity_loadAll}}"></view>
+	<view class="text-center text-grey padding-top-xl padding-bottom-sm" wx:if="{{activity_loadAll}}">
+		------社团也是有底线的噢！------</view>
+
+</view>

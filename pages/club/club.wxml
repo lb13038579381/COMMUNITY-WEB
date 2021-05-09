@@ -1,0 +1,135 @@
+<!--pages/club/club.wxml-->
+<view class="goback" bindtap="navigateBack">
+	<text class="cuIcon-back margin-left text-yellow text-bold"></text>
+</view>
+<view class="picture">
+	<image src="../../images/{{community.thumbnail}}" mode="aspectFill"></image>
+</view>
+
+<view class="header">
+	<view class="flex justify-between padding-lr-lg">
+		<view class="padding-top-sm">
+			<view class="text-xxxl text-bold padding-left-xs">{{community.communityName}}</view>
+		</view>
+		<view class="text-center">
+			<view class="cu-avatar xl round head_image" style="background-image:url(../../images/{{community.thumbnail}});">
+			</view>
+			<view class="padding-top-sm">
+				<button class="cu-btn round lg bg-yellow" bindtap="goTofollow" data-id="{{community.id}}">
+					<view wx:if="{{!is_follow}}">关注一下</view>
+					<view wx:else>已关注</view>
+				</button>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- <view class="notice">
+	社团招新啦啦啦啦啦啦啦啦啦啦啦！
+</view> -->
+
+
+<view class="sort">
+	<view class="tab ">
+		<view class="{{sort == 0 ? 'active' : ''}}" bindtap="changeItem" data-item="0">简介</view>
+	</view>
+	<view class="tab">
+		<view class="{{sort == 2 ? 'active' : ''}}" bindtap="changeItem" data-item="2">动态</view>
+	</view>
+</view>
+<view class="content">
+	<swiper current="{{item}}" bindchange="changeSort">
+		<swiper-item>
+			<!-- 简介 -->
+			<scroll-view class="info" scroll-y>
+				<view class="cu-card">
+					<view class="cu-item shadow">
+						<view class="cu-bar bg-white">
+							<view class="action">
+								<text class="cuIcon-titles text-yellow"></text>
+								<text class="text-xl text-bold">社团简介</text>
+							</view>
+						</view>
+						<view class="content padding-lr-xl padding-bottom">
+							<text decode="{{true}}">
+								{{community.introduction}}
+							</text>
+						</view>
+					</view>
+				</view>
+				<view class="cu-card">
+					<view class="cu-item shadow">
+						<view class="cu-bar bg-white">
+							<view class="action">
+								<text class="cuIcon-titles text-yellow"></text>
+								<text class="text-xl text-bold">主要成员</text>
+							</view>
+						</view>
+						<view class="content padding-lr-xl padding-bottom">
+							<view class="cu-tag radius" wx:for="{{community.members}}" wx:key='id' wx:for-item="user">
+								{{user.realName}}</view>
+						</view>
+					</view>
+					<button class="cu-btn round lg bg-yellow" bindtap="goToJoin" data-id="{{community.id}}">
+						<view wx:if="{{!isJoined}}">申请加入</view>
+						<view wx:else>已加入</view>
+					</button>
+				</view>
+
+				<view class="footer">
+					-------社团也是又底线的噢！---------
+				</view>
+			</scroll-view>
+
+		</swiper-item>
+		<swiper-item>
+
+		</swiper-item>
+		<swiper-item class="club_activity">
+			<!-- 动态 -->
+			<scroll-view scroll-y bindscrolltolower="clubInfoLower">
+				<view class="padding-top-sm"></view>
+				<view wx:for="{{clubInfoList}}" wx:key="id">
+					<view class="cu-card case">
+						<view style="margin-top: 15rpx" class="cu-item shadow" bindtap="goToInfo" data-id="{{item.id}}"
+							data-type="{{item.type}}">
+							<view class="image">
+								<image class="image_activity" src="../../images/{{item.thumbnail}}" mode="aspectFill"></image>
+								<view wx:if="{{item.status == 0}}" class="cu-tag bg-green">预热</view>
+								<view wx:elif="{{item.status == 1}}" class="cu-tag bg-yellow">报名中</view>
+								<view wx:elif="{{item.status == 2}}" class="cu-tag bg-red">已结束</view>
+								<view class="cu-bar bg-shadeBottom">
+									<text class="text-cut">{{item.title}}</text>
+								</view>
+							</view>
+							<view class="cu-list padding-sm">
+								<view class="cu-item">
+									<view class="text-xl text-bold flex justify-between">
+										<text style="width: 60%;" class="text-cut">{{item.title}}</text>
+									</view>
+									<view class="text-grey padding-top-xs">时间：{{item.startTimeStr}}</view>
+									<view class="text-grey flex justify-between">
+										地点：{{item.address}}
+										<view>{{item.communityName}}</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+
+				</view>
+				<view wx:if="{{isDirector}}" style="height:100rpx;width:100rpx;border:1rpx solid black;position:fixed;right:30rpx;bottom:20rpx">
+					<view  bindtap="goToNew" data-id="{{community.id}}">
+						<navigator class="content">
+							<image src="../../images/新建活动.jpeg" role='img' style="height:65px;width:150px;"></image>
+						</navigator>
+					</view>
+				</view>
+
+				<view class="text-center text-grey padding-top-xl padding-bottom-sm" wx:if="{{info_loadAll}}">
+					------社团也是有底线的噢！------</view>
+
+			</scroll-view>
+		</swiper-item>
+	</swiper>
+</view>

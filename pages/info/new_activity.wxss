@@ -1,0 +1,52 @@
+Page{
+  background-color: #fff;
+}
+
+.info{
+  font-weight: bold;
+  font-size: 60rpx;
+  margin-top: 80rpx;
+}
+
+.cu-form-group {
+  background-color: var(--white);
+  padding: 1rpx 0rpx;
+  display: flex;
+  min-height: 100rpx;
+  justify-content: space-between;
+}
+.cu-form-group .title {
+  font-size: 36rpx;
+}
+.cu-form-group input{
+  font-size: 36rpx;
+}
+
+.cu-form-group textarea {
+  font-size: 36rpx;
+  height: 10em;
+}
+.apply_btn {
+  width: 80%;
+  padding: 0 40rpx;
+  font-size: 36rpx;
+  height: 80rpx;
+  color: var(--white);
+  font-weight: bold;
+}
+.tui-picker-content{
+  padding: 30rpx;
+  text-align: center;
+}
+.tui-picker-name{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.tui-picker-detail{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  font-size: 35rpx;
+  padding: 0 10px;
+  overflow: hidden;
+}

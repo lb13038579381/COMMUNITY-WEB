@@ -1,0 +1,16 @@
+<!--pages/myfollow/myfollow.wxml-->
+<view class="cu-list menu-avatar">
+	<view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{myFollow}}" wx:key="id" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+		<view class="cu-avatar round lg" style="background-image:url(../../images/{{item.thumbnail}});"></view>
+		<view class="content">
+			<view class="text-grey text-bold" style="font-size:36rpx">{{item.name}}</view>
+			<view class="text-gray text-sm">
+				想左滑查看更多
+			</view>
+		</view>
+		<view class="move">
+			<view class="bg-yellow" bindtap="goToClub" data-id="{{item.id}}">查看</view>
+			<view class="bg-red" bindtap="cancelFollow" data-id="{{item.id}}">取消关注</view>
+		</view>
+	</view>
+</view>

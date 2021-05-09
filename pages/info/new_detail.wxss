@@ -1,0 +1,26 @@
+Page{
+  background-color: #fff;
+}
+
+.title{
+  font-size: 50rpx;
+  font-weight: bold;
+  padding: 30rpx;
+}
+
+.content{
+  padding: 20rpx 30rpx;
+  font-size: 36rpx;
+}
+
+.footer{
+  padding: 20rpx 30rpx;
+  font-size: 30rpx;
+  color: var(--grey);
+  margin-bottom: 30px;
+}
+
+.title_icon{
+  width: 30rpx;
+  height: 30rpx;
+}

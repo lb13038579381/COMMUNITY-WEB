@@ -1,0 +1,55 @@
+/* pages/activity/activity.wxss */
+.nav {
+  white-space: nowrap;
+  padding: 60rpx 0rpx 30rpx 20rpx;
+}
+
+.nav .cu-item.cur {
+  border-bottom: 5rpx solid;
+}
+
+.nowrap{
+  white-space:nowrap;
+}
+
+.image_signup {
+  width: 350rpx;
+  display: inline-block;
+  margin-right: 15px;
+  height: 250rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.aspectFill{
+  height: 100%;
+}
+
+.cu-tag{
+  left: 0;
+  border-bottom-right-radius: 13rpx;
+}
+
+.image_activity{
+  height: 280rpx;
+}
+.title_new{
+  line-height: 80rpx;
+}
+
+.page_center{
+  display: flex;
+  justify-content: center;
+  margin-top: 400rpx;
+}
+
+
+.topnav{
+  position: fixed;
+  top: 0rpx;
+  left: 0;
+  z-index:99;
+  background: var(--ghostWhite);
+  width: 100%;
+  z-index:999;
+}

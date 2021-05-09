@@ -1,0 +1,103 @@
+<view class="bg-yellow shadow shadow-lg userInfo">
+	<block wx:if="{{is_login}}">
+		<!-- <view class="cu-avatar xl round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg);"></view> -->
+
+		<view class="header">
+			<open-data type="userAvatarUrl"></open-data>
+		</view>
+		<view class="text-xl text-bold padding-top-xs text-white">{{myInfo.nickName}}</view>
+		<view class="padding-top-xs">学号：{{myInfo.studentNumber}}</view>
+	</block>
+	<view wx:else>
+		<navigator url="/pages/login/login">
+			<image class="logo" src="../../image/logo.png" mode="aspectFill"></image>
+			<view class="text-center">
+				<button style="width:350rpx" class="text-lg cu-btn bg-white shadow-blur round">请登录吧！</button>
+			</view>
+		</navigator>
+	</view>
+
+
+</view>
+
+<scroll-view scroll-y class="scrollPage">
+	<view class="info padding-sm flex text-center text-grey bg-white shadow-warp">
+
+		<view bindtap="goToMyClub" class="flex flex-sub flex-direction solid-right">
+			<view>
+				<image class="title_icon" src="../../image/myclub.png"></image>
+				<view>社团</view>
+			</view>
+		</view>
+
+		<view bindtap="goToMyApply" class="flex flex-sub flex-direction">
+			<view>
+				<image class="title_icon" src="../../image/myapply.png"></image>
+				<view>报名</view>
+			</view>
+		</view>
+
+		<view bindtap="goToMyCommunityApply" class="flex flex-sub flex-direction">
+			<view>
+				<image class="title_icon" src="../../image/myapply.png"></image>
+				<view>申请</view>
+			</view>
+		</view>
+	</view>
+
+
+		<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+			<view class="cu-item arrow">
+				<navigator class="content" url="/pages/my/myfollow" hover-class="none">
+					<image src="../../image/follow.png"></image>
+					<text class="text-grey">我的关注</text>
+				</navigator>
+			</view>
+
+			<view class="cu-item arrow">
+				<navigator class="content" url="/pages/my/mycollect" hover-class="none">
+					<image src="../../image/collect.png"></image>
+					<text class="text-grey">我的收藏</text>
+				</navigator>
+			</view>
+
+			<view class="cu-item arrow">
+				<navigator class="content" url="/pages/log/log" hover-class="none">
+					<image src="../../image/log.png"></image>
+					<text class="text-grey">更新日志</text>
+				</navigator>
+			</view>
+
+			<view class="cu-item arrow">
+				<navigator class="content" url="/pages/club/new_club" hover-class="none">
+					<image src="../../image/about.png"></image>
+					<text class="text-grey">新社团申请</text>
+				</navigator>
+			</view>
+
+			<view class="cu-item arrow">
+				<navigator class="content" url="/pages/my/feedback" hover-class="none">
+					<image src="../../image/opinion.png"></image>
+					<text class="text-grey">意见反馈</text>
+				</navigator>
+			</view>
+
+			<view wx:if="{{myInfo.type == 1}}"class="cu-item arrow">
+				<navigator class="content" url="/pages/my/community_apply_list" hover-class="none">
+					<image src="../../image/opinion.png"></image>
+					<text class="text-grey">新社团申请处理</text>
+				</navigator>
+			</view>
+
+			<view wx:if="{{myInfo.type == 1}}"class="cu-item arrow">
+				<navigator class="content" url="/pages/my/feedback_list" hover-class="none">
+					<image src="../../image/opinion.png"></image>
+					<text class="text-grey">意见反馈处理</text>
+				</navigator>
+			</view>
+
+		</view>
+		<view class="cu-tabbar-height"></view>
+
+</scroll-view>

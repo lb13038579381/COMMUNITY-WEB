@@ -1,0 +1,4 @@
+/* pages/myinfo/myinfo.wxss */
+.cu-card>.cu-item {
+    margin-bottom: 0rpx;
+}

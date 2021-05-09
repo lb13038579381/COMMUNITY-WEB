@@ -1,0 +1,30 @@
+<!--pages/login/login.wxml-->
+<view class="head">
+	<view>
+		<image src="../../image/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+	</view>
+</view>
+<view class="title">
+<image src="../../image/logo.png" mode="aspectFill" ></image>
+</view>
+
+<view class="content">
+	<form bindsubmit="doLogin">
+		<view class="cu-btn round line-gray shadow lg" style="justify-content:left">
+			<input id="username" name="username" placeholder-class="phcolor" class="input" type="number" placeholder="学号" />
+		</view>
+		<view class="cu-btn round line-gray shadow margin-top-lg lg" style="justify-content:left">
+			<view>
+				<input id="password" name="password" placeholder-class="phcolor" class="input" password type="text" placeholder="密码" />
+			</view>
+		</view>
+		<view class="flex justify-start text-grey padding-top padding-left-sm">
+			绑定前请阅读并同意
+			<view class="text-yellow" bindtap="goToSecret">《用户隐私协议》</view>
+		</view>
+		<button open-type="getUserInfo" formType="submit" class="cu-btn bg-yellow shadow-blur round lg submit text-bold">
+			<view wx:if="{{!is_load}}">绑定</view>
+			<view wx:else class="cu-load loading"></view>
+		</button>
+	</form>
+</view>

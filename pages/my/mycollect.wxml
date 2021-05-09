@@ -1,0 +1,21 @@
+<!--pages/mycollect/mycollect.wxml-->
+
+<view class="cu-card" wx:for="{{myCollect}}" wx:key="id">
+	<view class="cu-item shadow">
+		<view class="content">
+			<view class="flex margin-lg">
+				<view style="width: 60%;" class="flex-twice">
+					
+					<view class="title text-cut" bindtap="goToInfo" data-id="{{item.id}}">{{item.title}}</view>
+					<view>
+						<view class="place">地点：{{item.address}}</view>
+						<view class="time">时间：{{item.timeStr}}</view>
+					</view>
+				</view>
+				<view class="flex-sub activity_image">
+					<image src="{{item.collect.thumbnail}}" mode="aspectFill"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,64 @@
+/* pages/login/login.wxss */
+page {
+  background-color: #ffffff;
+}
+
+.head {
+  background-color: var(--yellow);
+  width: 100%;
+  height: 420rpx;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.title {
+  color: #000;
+  font-size: 150rpx;
+  font-weight: bold;
+  position: absolute;
+  top: 80rpx;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.gif-wave {
+  background-color: var(--yellow);
+  width: 100%;
+  mix-blend-mode: screen;
+  height: 250rpx;
+  max-width: 100%;
+  top: 5px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.content {
+  padding: 135rpx 100rpx;
+}
+
+.cu-btn {
+  width: 100%;
+}
+
+.input {
+  text-align: left;
+  padding-left: 5px;
+}
+
+.phcolor {
+  color: var(--gray);
+}
+
+.submit {
+  margin-top: 90rpx;
+}
+.cu-load.loading::after {
+  content: "绑定中...";
+}
+.title > image{
+  height: 200rpx;
+}
+/* .cu-load.over::after {
+	content: "绑定失败";
+} */

@@ -1,0 +1,84 @@
+/* pages/club/club.wxss */
+@import "/pages/club/club_info.wxss";
+@import "/pages/club/club_son.wxss";
+@import "/pages/club/club_activity.wxss";
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.picture {
+  height: 380rpx;
+}
+.picture>image {
+  height: 100%;
+  width: 100%;
+}
+.header {
+  border-radius: 20rpx;
+  background-color: #ffffff;
+  position: relative; 
+  margin-top: -10px;
+  padding-bottom: 5px;
+}
+.head_image{
+  margin-top:-50rpx;
+}
+.text-xxxl {
+	font-size: 60rpx;
+}
+.padding-top-xxs{
+  padding-top: 15rpx;
+}
+.notice{
+  font-size: 36rpx;
+  background-color: #ffffff;
+  padding: 5px 0px 0px 40rpx;
+}
+.sort {
+  display: flex;
+  background-color: #ffffff;
+  font-size: 34rpx;
+}
+
+.sort .tab {
+  flex: 1;
+  text-align: center;
+  padding: 5px 0px;
+}
+
+.tab view {
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.tab .active {
+  color:var(--yellow);
+  border-bottom: 6rpx solid var(--yellow);
+  padding-bottom: 2px;
+}
+ .content{
+  flex: 1;
+}
+.content > swiper{
+  height:100%;
+}
+scroll-view{
+  height: 100%;
+}
+
+.footer{
+  margin-top: 30px;
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.goback{
+  position:absolute;
+  z-index: 9999;
+  top:70rpx;
+  font-size:50rpx;
+}
+

@@ -1,0 +1,4 @@
+/* pages/search.wxss */
+.cu-card.case .image image{
+    height: 300rpx;
+}

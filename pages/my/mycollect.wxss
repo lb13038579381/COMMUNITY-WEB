@@ -1,0 +1,19 @@
+/* pages/mycollect/mycollect.wxss */
+.activity_image image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 36rpx;
+    padding-bottom: 28rpx;
+}
+
+.place,.time {
+    color: var(--grey);
+}
+
+.cu-card>.cu-item {
+    margin-bottom: 10rpx;
+}

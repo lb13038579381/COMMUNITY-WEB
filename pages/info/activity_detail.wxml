@@ -1,0 +1,57 @@
+<!--pages/activity/activity_detail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="activity_detail_image">
+	<image src="../../images/{{activity.thumbnail}}"></image>
+</view>
+<view class="padding-lg margin-bottom-60">
+	<view class="solids-bottom padding-bottom-xl">
+		<view class="text-bold text-xxl padding-bottom-sm">{{activity.title}}</view>
+		<view class="text-df padding-top-xs">
+			时间：
+			<image class="title_icon" src="../../image/time.png"></image>
+			{{activity.timeStr}}
+		</view>
+		<view class="text-df padding-top-xs">
+			报名时间：
+			<image class="title_icon" src="../../image/apply_time.png"></image>
+			{{activity.startTimeStr}}---{{activity.endTimeStr}}
+		</view>
+		<view class="text-df padding-top-xs">地点：
+			<image class="title_icon" src="../../image/location.png"></image>
+			{{activity.address}}
+		</view>
+		<view class="text-df padding-top-xs">发始方：{{activity.communityName}}</view>
+	</view>
+	<view class="padding-top content">
+		<template is="wxParse" data="{{wxParseData:activity_content.nodes}}" />
+	</view>
+</view>
+
+<view class="footer">
+	<view class="flex">
+		<view class="flex-sub collect" bindtap="goToCollect" data-id="{{activity.id}}">
+			<view wx:if="{{!is_collect}}" class="flex justify-center">
+				<image class="collect_icon" src="../../image/tocollect.png"></image>
+				<view class="padding-left-xs text-yellow">收藏</view>
+			</view>
+			<view wx:else class="flex justify-center">
+				<image class="collect_icon" src="../../image/tocollect_a.png"></image>
+				<view class="padding-left-xs text-yellow">已收藏</view>
+			</view>
+		</view>
+		<view class="flex-twice margin-left">
+			<block wx:if="{{activity.status == 0}}">
+				<button class="cu-btn bg-green apply_btn">预热</button>
+			</block>
+			<block wx:elif="{{activity.status == 1}}">
+				<button wx:if="{{!is_apply}}" bindtap="goToApply" data-id="{{activity.id}}" class="cu-btn bg-yellow apply_btn">报名</button>
+				<button wx:else class="cu-btn bg-yellow apply_btn">已报名</button>
+			</block>
+			<block wx:elif="{{activity.status == 2}}">
+				<button class="cu-btn bg-red apply_btn">已结束报名</button>
+			</block>
+
+		</view>
+	</view>
+</view>

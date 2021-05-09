@@ -1,0 +1,63 @@
+<!--pages/activity/article_apply.wxml-->
+<view class="margin-xl">
+  <view class="info">填写活动信息</view>
+  <view class="padding-top text-grey padding-bottom-xl">请准确填写活动信息</view>
+  <form bindsubmit="uploadImg">
+
+    <view class="solids-bottom"></view>
+    <view class="cu-form-group">
+      <view class="text-xl title">标题</view>
+      <input id="title" name="title" placeholder="请填写活动标题"></input>
+    </view>
+
+    <view class="solids-bottom"></view>
+    <view class="cu-form-group">
+      <view class="text-xl title">活动详情</view>
+      <textarea id="text" name="text" maxlength="-1"></textarea>
+    </view>
+
+    <view class="solids-bottom"></view>
+    <view class="cu-form-group">
+      <view class="text-xl title">举办地址</view>
+      <input id="address" name="address" placeholder="请填写举办地址"></input>
+    </view>
+
+    <view class="solids-bottom"></view>
+    <view class="cu-form-group">
+      <view class="text-xl title">报名开始时间</view>
+      <input id="startTime" name="startTime" placeholder="格式为yyyy-MM-dd HH:mm:ss"></input>
+    </view>
+
+    <view class="solids-bottom"></view>
+    <view class="cu-form-group">
+      <view class="text-xl title">报名结束时间</view>
+      <input id="endTime" name="endTime" placeholder="格式为yyyy-MM-dd HH:mm:ss"></input>
+    </view>
+
+    <view class="solids-bottom"></view>
+    <view class="cu-form-group">
+      <view class="text-xl title">活动举办时间</view>
+      <input id="time" name="time" placeholder="格式为yyyy-MM-dd HH:mm:ss"></input>
+    </view>
+
+    <view class="solids-bottom"></view>
+    <view class="cu-form-group align-start">
+      <view class="text-xl title">人数限制</view>
+      <input id="people" name="people" placeholder="请填写人数"></input>
+    </view>
+
+    
+<view class="">
+    <label bindtap="chooseImg">点击选择封面</label>
+    <image src="{{photos}}"></image>
+    <button form-type="submit">提交</button>
+</view>
+      <!-- <view class="text-center">
+        <button form-type="submit" class="cu-btn bg-yellow apply_btn">提交</button>
+      </view> -->
+  </form>
+</view>
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <view class='cuIcon-emojifill text-yellow'></view>
+  <view class='gray-text'>拼命报名中...</view>
+</view>

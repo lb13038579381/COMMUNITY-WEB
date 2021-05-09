@@ -1,0 +1,35 @@
+<!--pages/myinfo/myinfo.wxml-->
+
+<view class="cu-card dynamic" wx:for="{{msgList}}" wx:key="id">
+	<view bindtap="goToDetail" data-id="{{item.msg.id}}" class="cu-item shadow">
+		<view class="cu-list menu-avatar">
+			<view class="cu-item">
+				<view class="cu-avatar round lg" style="background-image:url({{item.msg.club.avatar}});"></view>
+				<view class="content flex-sub">
+					<view class="text-bold flex justify-between" style="font-size:36rpx">
+						{{item.msg.club.club_name}}
+						<view class="text-gray text-sm">{{item.msg.create_time}}</view>
+					</view>
+					<view class="flex justify-between">
+						<view class="text-gray">
+							{{item.msg.clubson.clubson_name}}
+						</view>
+
+						<view>
+							<view wx:if="{{item.is_read == 0}}" class="cu-tag radius lg bg-red">未读</view>
+							<view wx:if="{{item.is_read == 1}}" class="cu-tag radius lg bg-grey">已读</view>
+							<view wx:if="{{item.msg.type == 0}}" class="cu-tag radius lg bg-yellow">社团通知</view>
+							<view wx:if="{{item.msg.type == 1}}" class="cu-tag radius lg bg-green">活动通知</view>
+						</view>
+
+					</view>
+
+
+				</view>
+			</view>
+		</view>
+		<!-- <view class="text-content">
+			折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
+		</view> -->
+	</view>
+</view>

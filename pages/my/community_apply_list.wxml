@@ -1,0 +1,21 @@
+<!--pages/myfollow/myfollow.wxml-->
+<view class="cu-list menu-avatar">
+	<view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{applyList}}" wx:key="id" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}"
+	style="height:160rpx;"
+	>
+		<view class="content" style="left:27rpx;">
+      <view class="text-grey text-bold" style="font-size:20rpx;line-height:20rpx;">名称：{{item.name}}</view>
+      <view class="text-grey text-bold" style="font-size:20rpx;line-height:20rpx;">简介：{{item.introductione}}</view>
+      <view class="text-grey text-bold" style="font-size:20rpx;line-height:20rpx;">申请时间：{{item.timeStr}}</view>
+      <view class="text-grey text-bold" style="font-size:20rpx;line-height:20rpx;">备注：{{item.remark}}</view>
+      <view wx:if="{{item.status == 0}}" class="text-grey text-bold" style="font-size:20rpx;line-height:20rpx;">当前状态：未处理</view>
+      <view wx:if="{{item.status == 1}}" class="text-grey text-bold" style="font-size:20rpx;line-height:20rpx;">当前状态：已通过</view>
+      <view wx:if="{{item.status == 2}}" class="text-grey text-bold" style="font-size:20rpx;line-height:20rpx;">当前状态：已拒绝</view>
+		</view>
+		<view class="move">
+			<view class="bg-yellow" bindtap="adoptApply" data-id="{{item.id}}">通过</view>
+      <view class="bg-red" bindtap="refuseApply" data-id="{{item.id}}">拒绝</view>
+      <view class="bg-red" bindtap="deleteApply" data-id="{{item.id}}">删除</view>
+		</view>
+	</view>
+</view>

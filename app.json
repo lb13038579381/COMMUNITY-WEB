@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/clubs/clubs",
+    "pages/club/club",
+    "pages/my/my",
+    "pages/info/info",
+    "pages/info/activity_detail",
+    "pages/info/new_detail",
+    "pages/info/activity_apply",
+    "pages/login/login",
+    "pages/log/log",
+    "pages/my/myfollow",
+    "pages/my/mycollect",
+    "pages/my/myclub",
+    "pages/myinfo/myinfo",
+    "pages/myinfo/myinfo_detail",
+    "pages/my/myapply",
+    "pages/search/search",
+    "pages/login/secret",
+    "pages/info/new_activity",
+    "pages/club/new_apply",
+    "pages/my/mycommunityapply",
+    "pages/my/apply_list",
+    "pages/my/feedback",
+    "pages/club/new_club",
+    "pages/my/community_apply_list",
+    "pages/my/feedback_list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/image/index.png",
+        "selectedIconPath": "/image/index_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/clubs/clubs",
+        "iconPath": "/image/clubs.png",
+        "selectedIconPath": "/image/clubs_active.png",
+        "text": "社团"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "iconPath": "/image/activity.png",
+        "selectedIconPath": "/image/activity_active.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "/image/my.png",
+        "selectedIconPath": "/image/my_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,27 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="title">
+	{{new.title}}
+</view>
+
+<view class="flex justify-start padding-lr ">
+	<view class="cu-avatar lg round" style="background-image:url({{new.club.avatar}});"></view>
+	<view class="text-df padding-left-sm padding-top-xs">
+		<view>{{new.club.club_name}} {{new.clubson.clubson_name}}</view>
+		<view class="text-grey padding-top-xs">
+			<image class="title_icon" src="../../image/time.png"></image>
+			{{new.check_time}}
+		</view>
+	</view>
+</view>
+
+<view class="solids-bottom margin-lr margin-top"></view>
+<view class="content">
+	<template is="wxParse" data="{{wxParseData:new_content.nodes}}" />
+</view>
+
+<view class="solids-bottom margin-lr margin-top"></view>
+<view class="footer">
+	<view class="text-grey padding-top-xs">编辑：{{new.add_user.user_name}} {{new.create_time}}</view>
+	<view class="text-grey padding-top-xs">审核：{{new.check_user.user_name}} {{new.check_time}}</view>
+</view>
